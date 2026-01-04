@@ -1,0 +1,148 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 240 5% 96%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 30 75% 45%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 240 5% 96%;
+    --secondary-foreground: 222.2 84% 4.9%;
+    --muted: 240 3.7% 85.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 5% 96%;
+    --accent-foreground: 222.2 84% 4.9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 30 80% 50%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+    --sidebar-background: 222.2 84% 4.9%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 217.2 91.2% 59.8%;
+    --sidebar-primary-foreground: 222.2 47.4% 11.2%;
+    --sidebar-accent: 217.2 32.6% 17.5%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 217.2 32.6% 17.5%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 30 75% 45%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 30 80% 50%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+    --sidebar-background: 222.2 84% 4.9%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 217.2 91.2% 59.8%;
+    --sidebar-primary-foreground: 222.2 47.4% 11.2%;
+    --sidebar-accent: 217.2 32.6% 17.5%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 217.2 32.6% 17.5%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  .prose {
+    --tw-prose-body: hsl(var(--foreground));
+    --tw-prose-headings: hsl(var(--foreground));
+    --tw-prose-lead: hsl(var(--muted-foreground));
+    --tw-prose-links: hsl(var(--primary));
+    --tw-prose-bold: hsl(var(--foreground));
+    --tw-prose-counters: hsl(var(--muted-foreground));
+    --tw-prose-bullets: hsl(var(--primary));
+    --tw-prose-hr: hsl(var(--border));
+    --tw-prose-quotes: hsl(var(--foreground));
+    --tw-prose-quote-borders: hsl(var(--border));
+    --tw-prose-captions: hsl(var(--muted-foreground));
+    --tw-prose-code: hsl(var(--foreground));
+    --tw-prose-pre-code: hsl(var(--foreground));
+    --tw-prose-pre-bg: hsl(var(--muted));
+    --tw-prose-invert-body: hsl(var(--foreground));
+    --tw-prose-invert-headings: hsl(var(--foreground));
+    --tw-prose-invert-lead: hsl(var(--muted-foreground));
+    --tw-prose-invert-links: hsl(var(--primary));
+    --tw-prose-invert-bold: hsl(var(--foreground));
+    --tw-prose-invert-counters: hsl(var(--muted-foreground));
+    --tw-prose-invert-bullets: hsl(var(--primary));
+    --tw-prose-invert-hr: hsl(var(--border));
+    --tw-prose-invert-quotes: hsl(var(--foreground));
+    --tw-prose-invert-quote-borders: hsl(var(--border));
+    --tw-prose-invert-captions: hsl(var(--muted-foreground));
+    --tw-prose-invert-code: hsl(var(--foreground));
+    --tw-prose-invert-pre-bg: hsl(var(--muted));
+    --tw-prose-invert-th-borders: hsl(var(--border));
+    --tw-prose-invert-td-borders: hsl(var(--border));
+  }
+
+  .prose-invert {
+    p, li, strong {
+      color: hsl(var(--foreground));
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      color: hsl(var(--foreground));
+    }
+    
+    .prose-p\:text-muted-foreground p {
+        color: hsl(var(--muted-foreground)) !important;
+    }
+  }
+
+  .text-muted-foreground {
+    color: hsl(var(--muted-foreground));
+  }
+}
+
+@layer utilities {
+    .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border-width: 0;
+    }
+}
